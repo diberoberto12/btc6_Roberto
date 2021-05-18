@@ -23,7 +23,8 @@ $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
-
+$routes->get('/', 'LoginController::index');
+$routes->post('login', 'LoginController::login');
 /*
  * --------------------------------------------------------------------
  * Route Definitions
