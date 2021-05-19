@@ -23,8 +23,7 @@ $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
-$routes->get('/', 'LoginController::index');
-$routes->post('login', 'LoginController::login');
+
 /*
  * --------------------------------------------------------------------
  * Route Definitions
@@ -34,7 +33,8 @@ $routes->post('login', 'LoginController::login');
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-
+$routes->get('/', 'LoginController::index');
+$routes->post('login', 'LoginController::login');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
