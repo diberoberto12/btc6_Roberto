@@ -13,10 +13,11 @@ class LoginController extends Controller
     
     // show login form
     public function index()    {  
-
+        
+  
         $session = session();  
         $session->setFlashdata('msg', '');
-    return view('login');
+    return view('login',$data);
     }      
 
     //check user is exist or not
