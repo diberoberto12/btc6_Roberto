@@ -10,3 +10,11 @@
     </div>
 </body>
 </html>
+
+    <?php
+    
+    echo $mydata1;
+    
+    echo"<br>" $mydata2; 
+    
+    ?>
