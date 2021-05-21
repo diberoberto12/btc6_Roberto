@@ -14,8 +14,6 @@ class LoginController extends Controller
     // show login form
     public function index()    {  
      
-        $data['mydata1']="user_name";
-        $data['mydata2']="password";
         return view('from',$data);
   
         $session = session();  
