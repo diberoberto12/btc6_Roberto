@@ -11,20 +11,16 @@ class LoginController extends Controller
         $this->login = new LoginModel();       
     }
     
-    // show login form
-    public function index()    {  
-     
-        return view('from',$data);
-  
+public function index()    {  
+
         $session = session();  
         $session->setFlashdata('msg', '');
-    return view('login',$data);
+    return view('login');
     }      
 
-    //check user is exist or not
     public function login(){
           
-        $data = array('user_name'=>$this->request->getVar('user_id'),'password'=>md5($this->request->getVar('password')));       
+        $data = array('user_name'=>$this->request->getVar('user_id'),'password'=>md5($this->request->getVar('password')));
         $user =  $this->login->where($data); 
         $rows = $this->login->countAllResults();
         $session = session();          
